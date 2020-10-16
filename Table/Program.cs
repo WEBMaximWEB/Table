@@ -78,8 +78,9 @@ namespace Table
 
                 for (int j = 1; j < cell_height; j++)
                 {
-                    Console.SetCursorPosition(left_indent + cell_width * (x - 1),
-                                              top_indent + cell_height * (y - 1) - j);
+                    Console.BackgroundColor = ConsoleColor.White;
+                    Console.SetCursorPosition(left_indent + cell_width * (x - 1) + x,
+                                              top_indent + cell_height * (y - 1) + j);
                     for (int i = 0; i < cell_width; i++)
                         Console.Write(" ");
                 }
